@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: lsgeun 일상 블로그
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -44,7 +44,7 @@ plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
-      defaultDateType: modified
+      defaultDateType: created
       priority:
         - frontmatter
         - git
@@ -163,7 +163,7 @@ plugins:
       position: left
       priority: 50
   - source: "@quartz-community/graph"
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -219,10 +219,14 @@ plugins:
       priority: 5
       condition: not-index
   - source: "@quartz-community/comments"
-    enabled: false
+    enabled: true
     options:
       provider: giscus
-      options: {}
+      repo: lsgeun/life
+        repoId: R_kgDOUS9Wpg
+        category: Announcements
+        categoryId: DIC_kwDOUS9Wps4DGtOa
+        lang: ko
     layout:
       position: afterBody
       priority: 10
@@ -230,13 +234,21 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Home: /
+        GitHub: https://github.com/lsgeun
+        LinkedIn: https://www.linkedin.com/in/lsgeun
+        Gmail: mailto:lsgeun.me@gmail.com
     layout:
       position: footer
       priority: 50
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    enabled: true`
+    options:
+      limit: 3
+      showTags: false
+    layout:
+      position: afterBody
+      priority: 40
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
