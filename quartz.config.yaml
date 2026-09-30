@@ -222,7 +222,8 @@ plugins:
     enabled: true
     options:
       provider: giscus
-      repo: lsgeun/life
+      options:
+        repo: lsgeun/life
         repoId: R_kgDOUS9Wpg
         category: Announcements
         categoryId: DIC_kwDOUS9Wps4DGtOa
